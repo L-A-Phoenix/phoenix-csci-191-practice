@@ -1,0 +1,120 @@
+html {
+  font-size: 12px;
+  box-sizing: border-box;
+  background-color: rgb(40, 40, 40);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Text Defaults */
+body {
+  font-family: "Times New Roman", Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* Header Defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-wrap: balance;
+}
+
+h1 {
+  border: 0.2rem solid rgb(200, 200, 200);
+  border-right: none;
+  padding: 0.3rem;
+  font-size: 2rem;
+  margin: 1rem;
+  margin-right: 100rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 0.2rem solid rgb(200, 200, 200);
+}
+
+p {
+  text-wrap: pretty;
+  color: rgb(215, 215, 215);
+}
+
+strong {
+  color: white;
+}
+
+a,
+button {
+  color: rgb(100, 150, 250);
+  font-style: underline;
+}
+
+button {
+  background-color: none;
+  border-radius: 1rem;
+  border-color: white;
+}
+
+/* TEMP */
+.central-text {
+  color: white;
+  border: 0.2rem solid white;
+  border-radius: 0.3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  padding: 0.15rem;
+  margin-left: 49rem;
+  margin-right: 49rem;
+  margin-bottom: 0.5rem;
+}
+
+section.section-block {
+  border: 0.15rem solid rgb(200, 200, 200);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 25rem;
+  margin-right: 25rem;
+  padding: 1rem;
+}
+
+#hero {
+  padding-bottom: 2rem;
+  padding-top: 15rem;
+  text-align: center;
+  background-size: cover;
+  background-color: rgb(35, 35, 35);
+  background-image: url("../images/hero-image.jpg");
+  border-bottom: 0.2rem solid rgb(200, 200, 200);
+  width: 120rem;
+  height: 30rem;
+}
+
+#page-header {
+  display: flex;
+  padding: 1rem;
+  background-color: rgb(30, 30, 30);
+  border-bottom: 0.2rem solid rgb(200, 200, 200);
+}
