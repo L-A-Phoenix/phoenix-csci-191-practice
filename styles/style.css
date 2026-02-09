@@ -37,7 +37,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+caption {
   font-family: "Arial Black", Gadget, sans-serif;
   text-wrap: balance;
 }
@@ -51,10 +52,17 @@ h1 {
   margin-right: 100rem;
 }
 
-h2 {
+h2,
+caption {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   border-bottom: 0.2rem solid rgb(200, 200, 200);
+}
+
+input,
+textarea {
+  resize: none;
+  overflow: auto;
 }
 
 p {
@@ -117,4 +125,17 @@ section.section-block {
   padding: 1rem;
   background-color: rgb(30, 30, 30);
   border-bottom: 0.2rem solid rgb(200, 200, 200);
+}
+
+#contact-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  border: 0.15rem solid rgb(200, 200, 200);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 35rem;
+  margin-right: 35rem;
+  margin-top: 10rem;
+  padding: 1rem;
 }
