@@ -1,97 +1,98 @@
-html {
-  font-size: 12px;
-  box-sizing: border-box;
-  background-color: rgb(40, 40, 40);
-}
+@layer base {
+  html {
+    font-size: 12px;
+    box-sizing: border-box;
+    background-color: rgb(40, 40, 40);
+  }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-}
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+  }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
 
-/* Text Defaults */
-body {
-  font-family: "Times New Roman", Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin: 0;
-  padding: 0;
-  color: white;
-}
+  /* Text Defaults */
+  body {
+    font-family: "Times New Roman", Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
 
-/* Header Defaults */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-caption {
-  font-family: "Arial Black", Gadget, sans-serif;
-  text-wrap: balance;
-}
+  /* Header Defaults */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  caption {
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-wrap: balance;
+  }
 
-h1 {
-  border: 0.2rem solid rgb(200, 200, 200);
-  border-right: none;
-  padding: 0.3rem;
-  font-size: 2rem;
-  margin: 1rem;
-  margin-right: 100rem;
-}
+  h1 {
+    border: 0.2rem solid rgb(200, 200, 200);
+    border-right: none;
+    padding: 0.3rem;
+    font-size: 2rem;
+    margin: 1rem;
+    margin-right: 100rem;
+  }
 
-h2,
-caption {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-  border-bottom: 0.2rem solid rgb(200, 200, 200);
-}
+  h2,
+  caption {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 0.2rem solid rgb(200, 200, 200);
+  }
 
-input,
-textarea {
-  width: 100%;
-  resize: none;
-  overflow: auto;
-}
+  input,
+  textarea {
+    width: 100%;
+    resize: none;
+    overflow: auto;
+  }
 
-p {
-  text-wrap: pretty;
-  color: rgb(215, 215, 215);
-}
+  p {
+    text-wrap: pretty;
+    color: rgb(215, 215, 215);
+  }
 
-strong {
-  color: white;
-}
+  strong {
+    color: white;
+  }
 
-a,
-button {
-  color: rgb(100, 150, 250);
-  font-style: underline;
-}
+  a,
+  button {
+    color: rgb(100, 150, 250);
+    font-style: underline;
+  }
 
-button {
-  background-color: rgb(125, 125, 125);
-  border-radius: 1rem;
-  border-color: white;
-  color: white;
-}
+  button {
+    background-color: rgb(125, 125, 125);
+    border-radius: 1rem;
+    border-color: white;
+    color: white;
+  }
 
-ul {
-  list-style-type: none;
+  ul {
+    list-style-type: none;
+  }
 }
-
 section.section-block {
   border: 0.15rem solid rgb(200, 200, 200);
   border-radius: 1rem;
