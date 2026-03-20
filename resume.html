@@ -6,124 +6,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Resume: Lorenzo Phoenix</title>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Links and Logo -->
     <header id="page-header">
       <img
         src="./images/EvilKitty.png"
-        width="100px"
-        height="100px"
+        width="100rem"
+        height="100rem"
         alt="Logo Image"
       />
-      <nav>
-        <ul>
+      <nav aria-label="primary-navigation" class="min-w-lg">
+        <ul id="header-links">
           <li><a href="./">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="resume.html" aria-current="page">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <h1>Resume</h1>
-      <!-- Education -->
-      <section class="section-block">
-        <h2>Education</h2>
-        <h3><strong>Helena High School</strong>:</h3>
-        <p><strong>Graduation Date:</strong> June 7, 2025</p>
-        <p><strong>GPA:</strong> 3.75</p>
+      <div class="flex flex-col items-center gap-5">
+        <!-- Education -->
+        <section class="section-block">
+          <h2>Education</h2>
+          <h3><strong>Helena High School</strong>:</h3>
+          <p><strong>Graduation Date:</strong> June 7, 2025</p>
+          <p><strong>GPA:</strong> 3.75</p>
 
-        <h3>University of Montana</h3>
-        <p><strong>Davidson Honors College Student</strong></p>
-        <p><strong>Major:</strong> Computer Science</p>
-        <p><strong>Certificate:</strong> Cyber Security</p>
-        <p><strong>Current GPA:</strong> 3.65</p>
-        <p><strong>Expected Graduation Date:</strong> May 2029</p>
-      </section>
+          <h3>University of Montana</h3>
+          <p><strong>Davidson Honors College Student</strong></p>
+          <p><strong>Major:</strong> Computer Science</p>
+          <p><strong>Certificate:</strong> Cyber Security</p>
+          <p><strong>Current GPA:</strong> 3.65</p>
+          <p><strong>Expected Graduation Date:</strong> May 2029</p>
+        </section>
 
-      <!-- Experience -->
-      <section class="section-block">
-        <h2>Experience</h2>
-        <h3><strong>Business Professionals of America</strong></h3>
-        <p><strong>Time Attended:</strong> 2023 - 2025</p>
-        <p><strong>Position:</strong> President</p>
-        <p>
-          <strong>State Java Competition:</strong> 2024 - 7th place, 2025 - 3rd
-          place
-        </p>
-        <p><strong>National Java Competition:</strong> 2025 - 40th place</p>
-        <p><strong>Hopa Mountain Scholar</strong></p>
-      </section>
+        <!-- Experience -->
+        <section class="section-block">
+          <h2>Experience</h2>
+          <h3><strong>Business Professionals of America</strong></h3>
+          <p><strong>Time Attended:</strong> 2023 - 2025</p>
+          <p><strong>Position:</strong> President</p>
+          <p>
+            <strong>State Java Competition:</strong> 2024 - 7th place, 2025 -
+            3rd place
+          </p>
+          <p><strong>National Java Competition:</strong> 2025 - 40th place</p>
+          <p><strong>Hopa Mountain Scholar</strong></p>
+        </section>
 
-      <!-- Skills -->
-      <section class="section-block">
-        <h2>Skills</h2>
-        <ul>
-          <li>Java</li>
-          <li>Python</li>
-          <li>Writing</li>
-          <li>Public Speaking</li>
-          <li>Leadership</li>
-          <li>Time Management</li>
-          <li>Researching</li>
-          <li>Project Management</li>
-        </ul>
-      </section>
+        <!-- Skills -->
+        <section class="section-block">
+          <h2>Skills</h2>
+          <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Writing</li>
+            <li>Public Speaking</li>
+            <li>Leadership</li>
+            <li>Time Management</li>
+            <li>Researching</li>
+            <li>Project Management</li>
+          </ul>
+        </section>
+        <section class="section-block">
+          <!--Coursework-->
+          <table>
+            <caption>
+              <strong>Coursework</strong>
+            </caption>
+            <thead>
+              <th scope="col">Course</th>
+              <th scope="col">Description</th>
+              <th scope="col">Grade</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">AP CSCI A</th>
+                <td>
+                  Designing mobile interfaces using JavaScript and learning
+                  networking basics
+                </td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <th scope="row">AP CSCI B</th>
+                <td>
+                  Creating multi-class applications and learning programming
+                  concepts such as inheritance, polymorphism, and recursion
+                </td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <th scope="row">CSCI 150</th>
+                <td>
+                  Introduction to computer science basics focusing on python and
+                  NLPs
+                </td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <th scope="row">CSCI 151</th>
+                <td>
+                  In depth review of python fundamentals and basic github
+                  practices
+                </td>
+                <td>INP</td>
+              </tr>
+              <tr>
+                <th>CSCI 181</th>
+                <td>
+                  Practicing web development and coding semantics using HTML,
+                  CSS, and JavaScript
+                </td>
+                <td>INP</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
     </main>
-    <section class="section-block">
-      <table>
-        <caption>
-          <strong>Coursework</strong>
-        </caption>
-        <thead>
-          <th scope="col">Course</th>
-          <th scope="col">Description</th>
-          <th scope="col">Grade</th>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">AP CSCI A</th>
-            <td>
-              Designing mobile interfaces using JavaScript and learning
-              networking basics
-            </td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <th scope="row">AP CSCI B</th>
-            <td>
-              Creating multi-class applications and learning programming
-              concepts such as inheritance, polymorphism, and recursion
-            </td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <th scope="row">CSCI 150</th>
-            <td>
-              Introduction to computer science basics focusing on python and
-              NLPs
-            </td>
-            <td>A</td>
-          </tr>
-          <tr>
-            <th scope="row">CSCI 151</th>
-            <td>
-              In depth review of python fundamentals and basic github practices
-            </td>
-            <td>INP</td>
-          </tr>
-          <tr>
-            <th>CSCI 181</th>
-            <td>
-              Practicing web development and coding semantics using HTML, CSS,
-              and JavaScript
-            </td>
-            <td>INP</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
   </body>
 </html>

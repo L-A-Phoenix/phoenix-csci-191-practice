@@ -45,18 +45,20 @@
   }
 
   h1 {
+    display: flex;
+    justify-content: left;
     border: 0.2rem solid rgb(200, 200, 200);
     border-right: none;
+    max-width: 15rem;
     padding: 0.3rem;
     font-size: 2rem;
     margin: 1rem;
-    margin-right: 100rem;
   }
 
   h2,
   caption {
     font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin: 1rem;
     border-bottom: 0.2rem solid rgb(200, 200, 200);
   }
 
@@ -83,7 +85,7 @@
   }
 
   button {
-    background-color: rgb(125, 125, 125);
+    background-color: rgb(100, 100, 100);
     border-radius: 1rem;
     border-color: white;
     color: white;
@@ -93,12 +95,22 @@
     list-style-type: none;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 section.section-block {
   border: 0.15rem solid rgb(200, 200, 200);
   border-radius: 1rem;
   margin-bottom: 2rem;
-  margin-left: 25rem;
-  margin-right: 25rem;
+  width: 60%;
   padding: 1rem;
 }
 
@@ -126,10 +138,7 @@ img.card-image {
   border-radius: 0.3rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
-  padding: 0.15rem;
-  margin-left: 49rem;
-  margin-right: 49rem;
-  margin-bottom: 0.5rem;
+  padding: 0.5rem;
 }
 
 .card {
@@ -147,12 +156,48 @@ img.card-image {
 }
 .card-list {
   display: flex;
-  margin-left: 20rem;
+  justify-content: center;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.25rem 0.25rem;
+  background: rgb(40, 40, 40);
+  color: rgb(200, 200, 200);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+nav a[aria-current="page"] {
+  padding: 0.5rem;
+  border: 0.1rem solid rgb(200, 200, 200);
+  border-radius: 0.5rem;
+  background-color: rgb(40, 40, 40);
+}
+
+nav[aria-label="primary-navigation"] {
+  flex: 1;
+}
+
+#header-links {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 2%;
 }
 
 #hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 2rem;
-  padding-top: 15rem;
   text-align: center;
   background-size: cover;
   background-color: rgb(35, 35, 35);
@@ -177,9 +222,6 @@ img.card-image {
   line-height: 2rem;
   border: 0.15rem solid rgb(200, 200, 200);
   border-radius: 1rem;
-  margin-bottom: 2rem;
-  margin-left: 35rem;
-  margin-right: 35rem;
-  margin-top: 10rem;
   padding: 1rem;
+  width: 50%;
 }
