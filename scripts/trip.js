@@ -27,20 +27,22 @@ function calculateFuelCost(gallons, gasPrice) {
 
 for (let i = 0; totalTraveled < totalDistance; i++) {
   if (totalTraveled + milesPerRefuel > totalDistance) {
-    totalCost += gasPrice * calculateGallonsNeeded(totalDistance - totalTraveled, mpg);
+    totalCost +=
+      gasPrice * calculateGallonsNeeded(totalDistance - totalTraveled, mpg);
     totalTraveled += totalDistance - totalTraveled;
-    
   } else {
     totalTraveled += milesPerRefuel;
     totalCost += gasPrice * fuelCapacity;
   }
-  
+
   console.log("--------------------------------------");
-  console.log(`Stop: ${i + 1} \nMiles Travelled: ${totalTraveled} \nMoney Spent: $${totalCost.toFixed(2)}`);
+  console.log(
+    `Stop: ${i + 1} \nMiles Travelled: ${totalTraveled} \nMoney Spent: $${totalCost.toFixed(2)}`,
+  );
 }
 
 console.log("=======================================");
-console.log(`For ${driverName}'s trip to Calagary, he will:`);
+console.log(`For ${driverName}'s trip to Calagary, they will:`);
 console.log(`-Travel: ${totalTraveled} Miles`);
 console.log(
   `-Need: ${calculateGallonsNeeded(totalDistance, mpg).toFixed(2)} Gallons of Gas`,

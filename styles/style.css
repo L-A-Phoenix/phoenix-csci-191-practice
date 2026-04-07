@@ -1,8 +1,29 @@
 @layer base {
+  :root {
+    --text-body: rgb(210, 210, 210);
+    --text-header: rgb(250, 250, 250);
+    --surface-bg: rgb(40, 40, 40);
+    --surface-bg-accent: rgb(30, 30, 30);
+    --shadow-main: rgb(250, 250, 250);
+    --border-default: rgb(200, 200, 200);
+    --button-main: rgb(90, 90, 90);
+    --button-hover: rgb(100, 100, 100);
+    --hero-bg: url("../images/index-images/dark-hero-bg.jpg");
+  }
   html {
     font-size: 12px;
     box-sizing: border-box;
-    background-color: rgb(40, 40, 40);
+  }
+  body.light {
+    --text-body: rgb(50, 50, 50);
+    --text-header: rgb(60, 60, 60);
+    --surface-bg: rgb(240, 240, 240);
+    --surface-bg-accent: rgb(230, 230, 230);
+    --shadow-main: rgb(0, 0, 0);
+    --border-default: rgb(100, 100, 100);
+    --button-main: rgb(50, 50, 50);
+    --button-hover: rgb(60, 60, 60);
+    --hero-bg: url("../images/index-images/light-hero-bg.jpg");
   }
 
   *,
@@ -29,7 +50,8 @@
     line-height: 1.5rem;
     margin: 0;
     padding: 0;
-    color: white;
+    background-color: var(--surface-bg);
+    color: var(--text-body);
   }
 
   /* Header Defaults */
@@ -42,12 +64,13 @@
   caption {
     font-family: "Arial Black", Gadget, sans-serif;
     text-wrap: balance;
+    color: var(--text-header);
   }
 
   h1 {
     display: flex;
     justify-content: left;
-    border: 0.2rem solid rgb(200, 200, 200);
+    border: 0.2rem solid var(--border-default);
     border-right: none;
     max-width: 15rem;
     padding: 0.3rem;
@@ -59,7 +82,7 @@
   caption {
     font-size: 1.5rem;
     margin: 1rem;
-    border-bottom: 0.2rem solid rgb(200, 200, 200);
+    border-bottom: 0.2rem solid var(--border-default);
   }
 
   input,
@@ -71,22 +94,17 @@
 
   p {
     text-wrap: pretty;
-    color: rgb(215, 215, 215);
+    color: var(--text-body);
   }
 
   strong {
     color: white;
   }
 
-  a,
   button {
-    color: rgb(100, 150, 250);
-    font-style: underline;
-  }
-
-  button {
-    background-color: rgb(100, 100, 100);
-    border-radius: 1rem;
+    background-color: var(--button-main);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     border-color: white;
     color: white;
   }
@@ -107,7 +125,7 @@
 }
 
 section.section-block {
-  border: 0.15rem solid rgb(200, 200, 200);
+  border: 0.15rem solid var(--border-default);
   border-radius: 1rem;
   margin-bottom: 2rem;
   width: 60%;
@@ -117,8 +135,6 @@ section.section-block {
 button.card-button {
   align-self: bottom;
   color: white;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
   margin-top: 1rem;
 }
 
@@ -127,14 +143,14 @@ p.card-text {
 }
 
 img.card-image {
-  border: 0.1rem solid rgb(200, 200, 200);
+  border: 0.1rem solid var(--border-default);
   width: 40%;
   height: 40%;
 }
 
 .central-text {
-  color: white;
-  border: 0.2rem solid white;
+  color: var(--text-header);
+  border: 0.2rem solid var(--border-default);
   border-radius: 0.3rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
@@ -142,7 +158,7 @@ img.card-image {
 }
 
 .card {
-  border: 0.15rem solid rgb(200, 200, 200);
+  border: 0.15rem solid var(--border-default);
   border-radius: 1rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
@@ -164,8 +180,8 @@ img.card-image {
   left: -999px;
   top: 0;
   padding: 0.25rem 0.25rem;
-  background: rgb(40, 40, 40);
-  color: rgb(200, 200, 200);
+  background: var(--surface-bg);
+  color: var(--border-default);
   border-radius: 0.5rem;
   z-index: 1;
 }
@@ -176,13 +192,14 @@ img.card-image {
 
 nav a[aria-current="page"] {
   padding: 0.5rem;
-  border: 0.1rem solid rgb(200, 200, 200);
+  border: 0.1rem solid var(--border-default);
   border-radius: 0.5rem;
-  background-color: rgb(40, 40, 40);
+  background-color: var(--surface-bg);
 }
 
 nav[aria-label="primary-navigation"] {
   flex: 1;
+  color: var(--text-body);
 }
 
 #header-links {
@@ -201,17 +218,19 @@ nav[aria-label="primary-navigation"] {
   text-align: center;
   background-size: cover;
   background-color: rgb(35, 35, 35);
-  background-image: url("../images/hero-image.jpg");
-  border-bottom: 0.2rem solid rgb(200, 200, 200);
+  background-image: var(--hero-bg);
+  border-bottom: 0.2rem solid var(--border-default);
   width: 100%;
   height: 30rem;
 }
 
 #page-header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem;
-  background-color: rgb(30, 30, 30);
-  border-bottom: 0.2rem solid rgb(200, 200, 200);
+  background-color: var(--surface-bg-accent);
+  border-bottom: 0.2rem solid var(--border-default);
   position: sticky;
   top: 0;
 }
@@ -220,8 +239,16 @@ nav[aria-label="primary-navigation"] {
   display: flex;
   flex-direction: column;
   line-height: 2rem;
-  border: 0.15rem solid rgb(200, 200, 200);
+  border: 0.15rem solid var(--border-default);
   border-radius: 1rem;
   padding: 1rem;
   width: 50%;
+}
+
+#theme-toggle {
+  box-shadow: var(--shadow-main) 0rem 0rem 1rem;
+  margin-left: 3rem;
+}
+#theme-toggle:hover {
+  background-color: var(--button-hover);
 }
