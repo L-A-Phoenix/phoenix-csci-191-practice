@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- Creates a Home Page -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="scripts/weather.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header id="page-header">
+      <img
+        src="./images/EvilKitty.png"
+        width="100rem"
+        height="100rem"
+        alt="Logo Image"
+      />
+      <nav aria-label="primary-navigation">
+        <ul id="header-links">
+          <li><a href="./" aria-current="page">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button" aria-label="Theme Toggle">
+        🌙 Switch to Light Mode
+      </button>
+    </header>
+    <h1>Weather</h1>
+    <main id="main-content" class="flex justify-center items-center">
+      <div id="weather-output">
+        <h2 class="text-4xl">Missoula Weather</h2>
+        <p id="weather-degrees">Loading...</p>
+        <p id="weather-forecast">Forecast</p>
+      </div>
+    </main>
+  </body>
+</html>
